@@ -11,7 +11,9 @@ describe("Tests for Todo component", () => {
 
     // search the input
     const newTask = "testing";
-    const fieldNode = await waitForElement(() => getByTestId("form-field"));
+    const fieldNode = await waitForElement(() =>
+      getByTestId("form-field-user")
+    );
 
     // type in input
     fireEvent.change(fieldNode, { target: { value: newTask } });
