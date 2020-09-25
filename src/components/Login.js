@@ -3,33 +3,50 @@ import Grid from "@material-ui/core/Grid";
 
 // import { Container } from './styles';
 const Todo = () => {
-  const [task, updateTask] = useState("");
-  const [tasks, updateTasks] = useState([]);
+  const [user, updateUser] = useState("");
+  const [users, updateUsers] = useState([]);
 
   const [password, updatePassword] = useState("");
-  const [passwords, updatePasswords] = useState("");
 
   const handleInputPassChange = (e) => updatePassword(e.target.value);
 
-  const handleInputChange = (e) => updateTask(e.target.value);
+  const handleInputChange = (e) => updateUser(e.target.value);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    if (task.trim() || password.trim()) {
-      updateTasks([...tasks, task]);
-      updateTask("");
-      updatePasswords([...password]);
+    if (user.trim() || password.trim()) {
+      updateUsers([...users, user]);
+      updateUser("");
       updatePassword("");
     }
   };
 
   return (
-    <>
+    <Grid
+      alignItems="center"
+      display="flex"
+      justify="center"
+      direction="row"
+      wrap="wrap"
+      style={{
+        margin: 0,
+        background: "black",
+        height: "97vh",
+        width: "100%",
+        fontWeight: "12",
+      }}
+    >
+      <Grid
+        style={{
+          height: "42%",
+        }}
+      ></Grid>
       <Grid
         container
         justify="center"
-        alignItems="column"
+        alignItems="space-between"
         alignContent="center"
+        flexDirection="column"
       >
         <form onSubmit={handleFormSubmit}>
           <Grid item>
@@ -38,11 +55,14 @@ const Todo = () => {
               onChange={handleInputChange}
               placeholder="User name or e-mail"
               type="text"
-              value={task}
+              value={user}
             />
           </Grid>
           <Grid item>
             <input
+              style={{
+                marginTop: 5,
+              }}
               data-testid="form-field-pass"
               onChange={handleInputPassChange}
               placeholder="Insert password"
@@ -53,21 +73,39 @@ const Todo = () => {
             />
           </Grid>
           <Grid>
-            <button data-testid="form-btn" type="submit">
-              Submit
+            <button
+              style={{
+                border: "none",
+                WebkitBorderRadius: "8px",
+                marginTop: 5,
+                color: "black",
+                backgroundColor: "#009cde",
+                width: "100%",
+                height: "5vh",
+                WebkitTextFillColor: "white",
+              }}
+              data-testid="form-btn"
+              type="submit"
+            >
+              Login
             </button>
           </Grid>
         </form>
       </Grid>
       <Grid justify="center" alignContent="center" alignItems="center">
-        <table data-testid="table">
+        <table
+          data-testid="table"
+          style={{
+            color: "#009cde",
+          }}
+        >
           <thead>
             <tr>
-              <li>Task</li>
+              <line>User</line>
             </tr>
           </thead>
           <tbody>
-            {tasks.map((t, index) => (
+            {users.map((t, index) => (
               <tr key={index}>
                 <td>{t}</td>
               </tr>
@@ -75,7 +113,7 @@ const Todo = () => {
           </tbody>
         </table>
       </Grid>
-    </>
+    </Grid>
   );
 };
 

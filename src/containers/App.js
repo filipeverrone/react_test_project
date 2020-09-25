@@ -1,6 +1,6 @@
 import React from "react";
-import Todo from "../components/Todo";
+import Login from "../components/Login";
 
-const App = () => <Todo />;
+const App = () => <Login />;
 
 export default App;
