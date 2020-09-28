@@ -12,9 +12,11 @@ const Todo = () => {
 
   const handleInputChange = (e) => updateUser(e.target.value);
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    if (user.trim() || password.trim()) {
+    if (user.trim() === "" || password.trim() === "") {
+      updateUsers([...users, "All fields is required"]);
+    } else if (user.trim() || password.trim() || password == "") {
       updateUsers([...users, user]);
       updateUser("");
       updatePassword("");
@@ -67,8 +69,8 @@ const Todo = () => {
               onChange={handleInputPassChange}
               placeholder="Insert password"
               type="password"
-              maxLength="10"
-              minLength="5"
+              maxLength="100"
+              minLength="1"
               value={password}
             />
           </Grid>
