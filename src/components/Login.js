@@ -103,7 +103,7 @@ const Todo = () => {
         >
           <thead>
             <tr>
-              <line>User</line>
+              <line>Status Authentication</line>
             </tr>
           </thead>
           <tbody>
