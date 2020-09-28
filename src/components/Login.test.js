@@ -5,7 +5,7 @@ import { render, waitForElement, fireEvent } from "@testing-library/react";
 import Login from "./Login";
 
 describe("Tests for User Login component", () => {
-  it("Should add new user when form has been submitted", async () => {
+  it("Should user login when form has been submitted", async () => {
     // render the component
     const { getByTestId, getByText } = render(<Login />);
 
@@ -43,10 +43,10 @@ describe("Tests for User Login component", () => {
   });
 });
 
-describe("Tests for User Login component: Errors", () => {
-  it("Should add new user when form has been submitted", async () => {
+describe("Tests for User Login component: Errors onlyUser", () => {
+  it("Should return error when form has been submitted", async () => {
     // render the component
-    const { getByTestId, getByText } = render(<Login />);
+    const { getByTestId } = render(<Login />);
 
     // search the user input
     const newUser = "testingError";
@@ -57,6 +57,35 @@ describe("Tests for User Login component: Errors", () => {
     // type in user input
     fireEvent.change(fieldUserNode, { target: { value: newUser } });
     expect(fieldUserNode.value).toEqual(newUser);
+
+    // search the button
+    const btnNode = await waitForElement(() => getByTestId("form-btn"));
+
+    // click on button
+    fireEvent.click(btnNode);
+
+    // search the table
+    const tdNode = "All fields is required";
+
+    // check if the user has been included on the table
+    expect(tdNode).toBeDefined();
+  });
+});
+
+describe("Tests for User Login component: Errors onlyPassword", () => {
+  it("Should return error when form has been submitted", async () => {
+    // render the component
+    const { getByTestId } = render(<Login />);
+
+    // search the user input
+    const newPass = "testingError";
+    const fieldPassNode = await waitForElement(() =>
+      getByTestId("form-field-pass")
+    );
+
+    // type in user input
+    fireEvent.change(fieldPassNode, { target: { value: newPass } });
+    expect(fieldPassNode.value).toEqual(newPass);
 
     // search the button
     const btnNode = await waitForElement(() => getByTestId("form-btn"));
