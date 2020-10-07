@@ -1,0 +1,44 @@
+2020-10-07T17:41:52.839288+00:00 app[api]: Initial release by user verronefilipe@gmail.com
+2020-10-07T17:41:52.839288+00:00 app[api]: Release v1 created by user verronefilipe@gmail.com
+2020-10-07T17:41:53.026431+00:00 app[api]: Enable Logplex by user verronefilipe@gmail.com
+2020-10-07T17:41:53.026431+00:00 app[api]: Release v2 created by user verronefilipe@gmail.com
+2020-10-07T17:42:21.208835+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/" host=reacttesting.herokuapp.com request_id=3c418575-de6d-4441-a8f4-5cf202ad3bdd fwd="191.162.76.182" dyno= connect= service= status=502 bytes= protocol=https
+2020-10-07T17:42:22.112654+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/favicon.ico" host=reacttesting.herokuapp.com request_id=8b544a97-8436-4431-a8de-9ff776080e7f fwd="191.162.76.182" dyno= connect= service= status=502 bytes= protocol=https
+2020-10-07T17:46:36.094028+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/" host=reacttesting.herokuapp.com request_id=97b44164-b331-40b2-a9b2-190171d15266 fwd="191.162.76.182" dyno= connect= service= status=502 bytes= protocol=https
+2020-10-07T17:46:36.638971+00:00 heroku[router]: at=info code=H81 desc="Blank app" method=GET path="/favicon.ico" host=reacttesting.herokuapp.com request_id=c19c0dad-4026-4585-ae79-9bb7bc76c77f fwd="191.162.76.182" dyno= connect= service= status=502 bytes= protocol=https
+2020-10-07T17:47:38.000000+00:00 app[api]: Build started by user verronefilipe@gmail.com
+2020-10-07T17:48:56.156825+00:00 app[api]: Deploy a3fe1b49 by user verronefilipe@gmail.com
+2020-10-07T17:48:56.156825+00:00 app[api]: Release v3 created by user verronefilipe@gmail.com
+2020-10-07T17:48:56.175285+00:00 app[api]: Scaled to web@1:Free by user verronefilipe@gmail.com
+2020-10-07T17:49:05.000000+00:00 app[api]: Build succeeded
+2020-10-07T17:49:07.781160+00:00 heroku[web.1]: Starting process with command `npm start`
+2020-10-07T17:49:11.071798+00:00 app[web.1]: 
+2020-10-07T17:49:11.071819+00:00 app[web.1]: > lib_test@0.1.0 start /app
+2020-10-07T17:49:11.071820+00:00 app[web.1]: > react-scripts start
+2020-10-07T17:49:11.071820+00:00 app[web.1]: 
+2020-10-07T17:49:13.737457+00:00 app[web.1]: [34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.17.111.238/
+2020-10-07T17:49:13.738051+00:00 app[web.1]: [34mℹ[39m [90m｢wds｣[39m: webpack output is served from
+2020-10-07T17:49:13.738180+00:00 app[web.1]: [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /app/public
+2020-10-07T17:49:13.738294+00:00 app[web.1]: [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+2020-10-07T17:49:13.738542+00:00 app[web.1]: Starting the development server...
+2020-10-07T17:49:13.738543+00:00 app[web.1]: 
+2020-10-07T17:49:13.821587+00:00 heroku[web.1]: Process exited with status 0
+2020-10-07T17:49:13.865257+00:00 heroku[web.1]: State changed from starting to crashed
+2020-10-07T17:49:13.868536+00:00 heroku[web.1]: State changed from crashed to starting
+2020-10-07T17:49:24.767725+00:00 heroku[web.1]: Starting process with command `npm start`
+2020-10-07T17:49:27.277804+00:00 app[web.1]: 
+2020-10-07T17:49:27.277822+00:00 app[web.1]: > lib_test@0.1.0 start /app
+2020-10-07T17:49:27.277822+00:00 app[web.1]: > react-scripts start
+2020-10-07T17:49:27.277822+00:00 app[web.1]: 
+2020-10-07T17:49:29.997341+00:00 app[web.1]: [34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.17.152.2/
+2020-10-07T17:49:29.997794+00:00 app[web.1]: [34mℹ[39m [90m｢wds｣[39m: webpack output is served from
+2020-10-07T17:49:29.997932+00:00 app[web.1]: [34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /app/public
+2020-10-07T17:49:29.998033+00:00 app[web.1]: [34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /
+2020-10-07T17:49:29.998303+00:00 app[web.1]: Starting the development server...
+2020-10-07T17:49:29.998304+00:00 app[web.1]: 
+2020-10-07T17:49:30.129714+00:00 heroku[web.1]: Process exited with status 0
+2020-10-07T17:49:30.178037+00:00 heroku[web.1]: State changed from starting to crashed
+2020-10-07T17:50:35.132188+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=reacttesting.herokuapp.com request_id=e7c1565e-89d1-478a-a8aa-e4bc00312dcb fwd="191.162.76.182" dyno= connect= service= status=503 bytes= protocol=https
+2020-10-07T17:50:35.552827+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=reacttesting.herokuapp.com request_id=418310fd-0630-45e5-a3e5-6400f01ca42c fwd="191.162.76.182" dyno= connect= service= status=503 bytes= protocol=https
+2020-10-07T17:50:35.579776+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=reacttesting.herokuapp.com request_id=1a2dfbf8-733e-4348-8cde-a746a1d68b72 fwd="191.162.76.182" dyno= connect= service= status=503 bytes= protocol=https
+2020-10-07T17:50:35.979765+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=reacttesting.herokuapp.com request_id=9444118b-16ab-453b-aec2-156d557702d5 fwd="191.162.76.182" dyno= connect= service= status=503 bytes= protocol=https

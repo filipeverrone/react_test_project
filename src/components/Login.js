@@ -69,7 +69,7 @@ const Todo = () => {
               onChange={handleInputPassChange}
               placeholder="Insert password"
               type="password"
-              maxLength="100"
+              maxLength="10"
               minLength="1"
               value={password}
             />
