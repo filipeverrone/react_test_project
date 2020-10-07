@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Grid from "@material-ui/core/Grid";
+import Users from "../authenticate.js";
 
 // import { Container } from './styles';
-const Todo = () => {
+const Todo = (data) => {
   const [user, updateUser] = useState("");
   const [users, updateUsers] = useState([]);
 
@@ -70,7 +71,7 @@ const Todo = () => {
               placeholder="Insert password"
               type="password"
               maxLength="10"
-              minLength="1"
+              minLength="5"
               value={password}
             />
           </Grid>
