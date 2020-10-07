@@ -48,7 +48,7 @@ const Todo = () => {
         justify="center"
         alignItems="space-between"
         alignContent="center"
-        flexDirection="column"
+        direction="column"
       >
         <form onSubmit={handleFormSubmit}>
           <Grid item>
